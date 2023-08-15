@@ -1,22 +1,97 @@
 body{
     margin: 40px auto;
-    max-width: 650px;
+    max-width: 80vw;
     line-height: 1.6;
     font-size: 18px;
-    color: #444444;
-    padding: 0 10px
+    color: #333333;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    align-items: center;
+    justify-content: center;
 }
 
 h1,h2,h3 {
-    line-height: 1.2
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    color: #333333;
 }
 
 fieldset {
-    border: none;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+fieldset:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; 
+    justify-content: space-between;
     flex-direction: column;
-    padding: 0.2rem;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+    
+}
+
+.car {
+    background-color: #f9f6f9;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.car:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.board-btn {
+    display:inline-block;
+    padding:0.8em 4em;
+    border:0.16em solid #e0e6d3ef;
+    margin:0 0.5em 0.5em 0;
+    border-radius: 0.2rem;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#444444;
+    text-align:center;
+    transition: all 0.35s;
+}
+
+.board-btn:hover{
+    color:#000000;
+    border-color: #000000;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.add-cars {
+    margin-top: 10vh;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%; /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }

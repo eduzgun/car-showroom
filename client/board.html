@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav>
-        <button id="logout-btn">Log out</button>
+        <button id="logout-btn" class="board-btn">Log out</button>
     </nav>
     <header>
         <h1>Showroom</h1>
@@ -23,29 +23,27 @@
 
         </div>
         <hr />
-        <form id="cars-form">
-            <fieldset>
-                <label for="make">Make:</label>
-                <input type="text" id="make" name="make" required>
-            </fieldset>
-            <fieldset>
-                <label for="model">Model:</label>
-                <input type="text" id="model" name="model" required>
-            </fieldset>
-            <fieldset>
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" required>
-            </fieldset>
-            <fieldset>
-                <label for="year">Year:</label>
-                <input type="number" id="year" name="year" required>
-            </fieldset>
-            <fieldset>
-                <label for="colour">Color:</label>
-                <input type="text" id="colour" name="colour" required>
-            </fieldset>
-            <input type="submit" value="Add_Car">
-        </form>
+        <section class="add-cars">
+            <h2>Add a car here</h2>
+                <form id="cars-form">
+                    <fieldset>
+                        <input type="text" id="make" name="make" placeholder="Make" required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" id="model" name="model" placeholder="Model" required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="number" id="price" name="price" placeholder="Price" required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="number" id="year" name="year" placeholder="Year">
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" id="colour" name="colour" placeholder="Colour" required>
+                    </fieldset>
+                    <input type="submit" value="Add Car" class="board-btn">
+                </form>
+        </section>
     </main>
 </body>
 </html>
