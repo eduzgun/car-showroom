@@ -22,6 +22,10 @@ function createPostElement (data) {
     colour.textContent = data["colour"];
     car.appendChild(colour);
 
+    const deleteButton = document.createElement("button");
+    deleteButton.setAttribute("class", "delete-btn");
+    deleteButton.textContent = "Delete"
+    car.appendChild(deleteButton);
     return car;
 }
 
