@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./assets/default.css">
+    <script src="./assets/board.js" defer></script>
+    <title>Show room</title>
+</head>
+<body>
+    <nav>
+        <button id="logout-btn">Log out</button>
+    </nav>
+    <header>
+        <h1>Showroom</h1>
+        <em>Look at these cool cars</em>
+    </header>
+    <hr />
+    <main>
+        <div class="container" id="cars">
+
+        </div>
+        <hr />
+        <form id="cars-form">
+            <fieldset>
+                <label for="make">Make:</label>
+                <input type="text" id="make" name="make" required>
+            </fieldset>
+            <fieldset>
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" required>
+            </fieldset>
+            <fieldset>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </fieldset>
+            <fieldset>
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required>
+            </fieldset>
+            <fieldset>
+                <label for="colour">Color:</label>
+                <input type="text" id="colour" name="colour" required>
+            </fieldset>
+            <input type="submit" value="Add_Car">
+        </form>
+    </main>
+</body>
+</html>
