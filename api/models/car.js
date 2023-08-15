@@ -28,7 +28,7 @@ class Car {
     static async create(data) {
         const { make, model, price, year, colour } = data;
         let response = await db.query("INSERT INTO car (make, model, price, year, colour) VALUES ($1, $2, $3, $4, $5) RETURNING car_id;",
-            [title, content]);
+            [make, model, price, year, colour]);
         const newId = response.rows[0].car_id;
         const newPost = await Post.getOneById(newId);
         return newPost;
@@ -41,4 +41,4 @@ class Car {
 
 }
 
-module.exports = Post;
+module.exports = Car;

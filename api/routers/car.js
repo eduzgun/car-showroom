@@ -3,11 +3,11 @@ const { Router } = require('express');
 const authenticator = require("../middleware/authenticator");
 const carController = require('../controllers/car.js');
 
-const postRouter = Router();
+const carRouter = Router();
 
-postRouter.get("/", authenticator, carController.index);
-postRouter.post("/", carController.create);
-postRouter.get("/:id", carController.show);
-postRouter.delete("/:id", carController.destroy);
+carRouter.get("/", authenticator, carController.index);
+carRouter.post("/", carController.create);
+carRouter.get("/:id", carController.show);
+carRouter.delete("/:id", carController.destroy);
 
-module.exports = carController;
+module.exports = carRouter;
