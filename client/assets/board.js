@@ -1,16 +1,28 @@
 function createPostElement (data) {
-    const post = document.createElement("div");
-    post.className = "post";
+    const car = document.createElement("div");
+    car.className = "car";
 
-    const header = document.createElement("h2");
-    header.textContent = data["title"];
-    post.appendChild(header);
+    const make = document.createElement("h2");
+    make.textContent = data["make"];
+    car.appendChild(make);
 
-    const content = document.createElement("p");
-    content.textContent = data["content"];
-    post.appendChild(content);
+    const model = document.createElement("p");
+    model.textContent = data["model"];
+    car.appendChild(model);
 
-    return post;
+    const price = document.createElement("p");
+    price.textContent = data["price"];
+    car.appendChild(price);
+
+    const year = document.createElement("p");
+    year.textContent = data["year"];
+    car.appendChild(year);
+
+    const colour = document.createElement("p");
+    colour.textContent = data["colour"];
+    car.appendChild(colour);
+
+    return car;
 }
 
 document.getElementById("cars-form").addEventListener("submit", async (e) => {
@@ -83,8 +95,8 @@ async function loadCars() {
 
             const container = document.getElementById("cars");
 
-            cars.forEach(c => {
-                const elem = createPostElement(c);
+            cars.forEach(p => {
+                const elem = createPostElement(p);
                 container.appendChild(elem);
             })
         } else {
